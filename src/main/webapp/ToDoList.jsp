@@ -8,6 +8,11 @@
 <body>
 
 <style>
+body {
+ background-color:
+ width: 100%;
+ height: 100%;
+}
 h1 {
   font-family:'Leckerli One' , cursive;
   font-size: 38px;
@@ -17,7 +22,7 @@ h1 {
 h2 {
 	font-family: 'Leckerli One';
   color: #669999;
-	font-size: 28px;
+	font-size: 18px;
   text-align: center;
 }
 h3 {
@@ -26,18 +31,14 @@ h3 {
 	color: #800000;
 	font-weight: bold;
 	letter-spacing: 1px;
-	font-size: 15px;
+	font-size: 20px;
   text-align: center;
 }
 </style>
 
     <center>
         <h1>To Do List!</h1>
-        <h2>
-            <a href="/new">Add New Item</a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="/list">List All Items</a>
-        </h2>
+
     </center>
     <div align="center">
         <table border="1" cell padding="5">
@@ -46,7 +47,7 @@ h3 {
                 <th>#</th>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Actions</th>
+                <th>Edit/Delete</th>
             </tr>
             <c:forEach var="list" items="${listItems}">
                 <tr>
@@ -62,5 +63,10 @@ h3 {
             </c:forEach>
         </table>
     </div>
+    <h2>
+                <a href="/new">Add New Item</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/list">List All Items</a>
+            </h2>
 </body>
 </html>
